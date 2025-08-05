@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>The Dev News</title>
+</head>
+<body>
+
+    <!-- Nav Bar somente com Título da Página -->
+    <nav id="navBar"> 
+        <h1> The Dev News </h1>
+    </nav>
+
+    <!-- A div principal dividida em 2 Flex, separando o conteúdo principal do Aside -->
+    <div class="principal"> 
+
+        <!-- Conteúdo Principal -->
+        <main id="containerMain">
+
+            <!-- Header com Artigo principal -->
+            <header id="header">
+                <p> opinião </p>
+                <h2>Como é ser um desenvolvedor</h2>
+                <p class="semiBold" ><b>By</b> Fabio Tetsuo</p>
+            </header>
+
+            <!-- Seção com os últimos Posts -->
+            <section id="postSection">
+                <div class="greenBackground">
+                    <div id="postHeader">
+                        <h3> Posts mais recentes </h3>
+                        <p> Ver Todos </p>
+                    </div>
+                </div>
+                <div id="containerPost">
+                    <div class="posts">
+                        <img class="postImage" src="./image/post1.svg" alt="Erro Imagem 1">
+                        <div class="postContent">
+                            <p class="greenText">desenvolvimento</p>
+                            <h3>Desenvolvimento mobile</h3>
+                            <p class="semiBold grayText" ><b>By</b> Fabio Tetsuo</p>
+                            <p> Lorem ipsum dolor sit amet consectetur. In vitae urna commodo amet congue integer dapibus. Interdum semper mauris convallis fusce enim odio. Vitae montes ridiculus felis. </p>
+                            <p class="semiBold grayText"> 22 Agosto 2022 </p>
+                        </div>
+                    </div>
+                    <div class="posts"> 
+                        <img class="postImage" src="./image/post2.svg" alt="Erro Imagem 1">
+                        <div class="postContent">
+                            <p class="greenText">saúde</p>
+                            <h3>Balancear vida profissional e pessoal</h3>
+                            <p class="semiBold grayText" ><b>By</b> Ridho Satriawan</p>
+                            <p> Lorem ipsum dolor sit amet consectetur. Et consectetur at consectetur sed nisl tempor. </p>
+                            <p class="semiBold grayText"> 22 Agosto 2022 </p>
+                        </div>
+                    </div>
+                    <div class="posts"> 
+                        <img class="postImage" src="./image/post3.svg" alt="Erro Imagem 1">
+                        <div class="postContent">
+                            <p class="greenText">desenvolvimento</p>
+                            <h3>Configurando VSCode</h3>
+                            <p class="semiBold grayText" ><b>By</b> Fabio Tetsuo</p>
+                            <p> Lorem ipsum dolor sit amet consectetur. Erat interdum tortor ac sagittis id a etiam. Tellus vitae arcu dignissim massa aliquam vel tellus. Ipsum massa arcu nulla sed purus in ac. </p>
+                            <p class="semiBold grayText"> 22 Agosto 2022 </p>
+                        </div>
+                    </div>
+                    <div class="posts"> 
+                        <img class="postImage" src="./image/post4.svg" alt="Erro Imagem 1">
+                        <div class="postContent">
+                            <p class="greenText">produtividade</p>
+                            <h3>2 monitores ou 1 ultrawide?</h3>
+                            <p class="semiBold grayText" ><b>By</b> Fulano da Silva</p>
+                            <p> Lorem ipsum dolor sit amet consectetur. Arcu tellus adipiscing sagittis tristique. Eget molestie posuere enim pretium venenatis nunc ligula donec a. Velit senectus amet nulla. </p>
+                            <p class="semiBold grayText"> 22 Agosto 2022 </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Seção Aside dividida em 2 partes: Posts mais visualizados e Filtros -->
+        <aside id="containerAside">
+            
+            <!-- Seção dos Posts mais visualizados -->
+            <section class="container">
+                <div class="postSmall"> Post 1</div>
+                <div class="postSmall"> Post 2</div>
+                <div class="postSmall"> Post 3</div>
+                <div class="postSmall"> Post 4</div>
+            </section>
+
+            <!-- Seção com os Filtros -->
+            <section class="container">
+                Categorias
+                <ul>
+                    <li> Lista 1 </li>
+                    <li> Lista 2 </li>
+                    <li> Lista 3 </li>
+                    <li> Lista 4 </li>
+                </ul>
+            </section>
+        </aside>
+    </div>
+
+    <!-- Footer do site só com Copyright-->
+    <footer id="footer"> Copyright@The Dev News </footer>
+        
+    
+</body>
+</html>
