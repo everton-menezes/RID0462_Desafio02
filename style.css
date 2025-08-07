@@ -9,17 +9,14 @@ html {
 body { margin: 0 ; }
 
 h1 { font-size: 2.25rem; font-weight: 700; line-height: 100%; margin: 0; }
-h2 { font-size: 2rem; font-weight: 700; line-height: 100%; margin: 0; }
+h2 { font-size: 2rem; font-weight: 700; line-height: 100%; line-height: 120%; margin: 0; }
 h3 { font-size: 1.25rem; font-weight: 700; line-height: 100%; margin: 0; }
 h4 { font-size: 1rem; font-weight: 700; line-height: 100%; margin: 0; }
 h5 { font-size: 1rem; font-weight: 400; line-height: 100%; margin: 0; color: #02A28F}
 p { font-size: 1rem; font-weight: 400; line-height: 100%; margin: 0; }
 
-.container {
-    border: 1px solid black;
-}
 
-#navBar {
+.fullWidth {
     height: 4.5rem;
     padding-left: 8rem;
     background-color: #02A28F;
@@ -29,16 +26,26 @@ p { font-size: 1rem; font-weight: 400; line-height: 100%; margin: 0; }
     align-content: center;
 }
 
+footer.fullWidth { padding-left: 0; height: 3rem; text-align: center; }
+
 .principal {
     display: flex;
-    border: 1px solid black;
     flex-direction: row;
     margin: 3rem 8rem 3rem 8rem;
     justify-content:space-evenly;
+    gap: 1.5rem; 
 }
 
 #containerMain{
-    width: 50vw;
+    flex: 2;
+    overflow: visible;
+}
+
+#containerAside{
+    flex: 1;
+    overflow: auto;
+    position: relative;
+    z-index: 10; 
 }
 
 #header{
@@ -47,43 +54,49 @@ p { font-size: 1rem; font-weight: 400; line-height: 100%; margin: 0; }
     background-size: cover;
     background-position: center;
     border-radius: 0.7rem;
-    height: 40vh;
+    height: 35vh;
     padding-left: 1.5rem;
     padding-bottom: 1.5rem;
     align-content: end;
     color: white;
 }
 
-#header > h2, p { margin-top: 2px; }
+#header > h2, p { margin-top: 0.25rem; }
+
+a { text-decoration: underline; font-weight: 500; color: white; cursor:pointer}
 
 .semiBold { font-weight: 500; }
 
-#containerAside{
-    border: 1px solid black;
-    width: 25vw;
-}
-
 #postSection {
     margin-top: 1.5rem;
+    width: 100%;
 }
 
 .greenBackground {
     background-color: #02A28F;
     color: white;
+    width: 100%;
+}
+
+.backgroundBig {
     height: 3.5rem;
     border-radius: 0.5rem;
 }
 
-#postHeader {
+.backgroundSmall {
+    height: 3rem;
+    border-radius: 0.5rem;
+}
+
+.sectionTitle {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 0 1.5rem 0 1.5rem;
     align-items: center;
     height: 100%;
+    width: auto;
 }
-
-#postHeader > p { text-decoration: underline; font-weight: 500; }
 
 #containerPost {
     display: grid;
@@ -105,6 +118,7 @@ p { font-size: 1rem; font-weight: 400; line-height: 100%; margin: 0; }
     width: 100%;   
     height: auto;  
     display: block;
+    object-fit: cover;
 }
 
 .postContent {
@@ -117,3 +131,122 @@ p { font-size: 1rem; font-weight: 400; line-height: 100%; margin: 0; }
 
 .greenText { font-size: 0.9rem; color: #02A28F; font-weight: 400; }
 .grayText { color: #616161; }
+
+#smallPostSection{
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+#containerSmallPost {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1rem 0 1rem 0;
+}
+
+.postSmall {
+    border-radius: 1rem;
+    box-shadow: 0.3rem 0.3rem 1rem #00000045;
+    height: 6rem;
+    display: flex;
+    align-items: flex-start;
+    padding: 1.25rem 1rem;
+    overflow: hidden;
+}
+
+.postSmallImage {
+    width: auto;
+    max-width: 30%;   
+    height: 100%;  
+    display: block;
+    object-fit: cover;
+    flex-shrink: 0;
+    margin-right: 1rem;
+    border-radius: 0.5rem;
+}
+
+.postSmallContent {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+.postSmallContent > p {
+    margin-top: 0.5rem;
+}
+
+#filtro {
+    margin-top: 1.75rem;
+}
+
+#filtro > ul {
+    padding: 0;
+    margin: 0.5rem;    
+}
+
+#filtro > ul > li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    font-weight: 500;
+}
+
+.listText {
+  text-align: left;
+}
+
+.listCount {
+    text-align: right;
+    white-space: nowrap;
+}
+
+
+@media only screen and (max-width: 767px) {
+    html { font-size: 14px;}
+    h1 { font-size: 1.5rem; }
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 1.25rem; }
+    h4 { font-size: 1rem; }
+    h5 { font-size: 1rem; }
+    p { font-size: 1rem; }
+
+    .fullWidth {padding-left: 0rem; text-align: center;}
+    #header { height: 50vh; }
+    .sectionTitle {padding: 0 1rem 0 1rem; }
+    .backgroundBig {border-radius: 0.75rem; }
+    .postSmall {padding: 1rem 1rem; }
+    .postSmallImage {max-width: 40%; }
+
+    #containerPost { grid-template-columns: repeat(1, 1fr); }
+    .principal { flex-direction: column; margin: 2rem 0.5rem 1rem 0.5rem; }
+    .posts {height: auto; border-radius: 2rem;}
+    #containerAside { margin-left: 0; z-index: 0; overflow: visible; }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    html { font-size: 16px;}
+    h1 { font-size: 2rem; }
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.5rem; }
+    h4 { font-size: 1rem; }
+    h5 { font-size: 1rem; }
+    p { font-size: 1rem; }
+
+    .fullWidth {padding-left: 0rem; text-align: center;}
+    #header { height: 40vh; }
+    .sectionTitle {padding: 0 1rem 0 1rem; }
+    .backgroundBig {border-radius: 0.75rem; }
+    .postSmall {padding: 1rem 1rem; }
+    .postSmallImage {max-width: 40%; }
+
+    #containerPost { grid-template-columns: repeat(2, 1fr); }
+    .principal { flex-direction: column; margin: 2.5rem 2.5rem 2.5rem 2.5rem; }
+    #containerAside { margin-left: 0; z-index: 0; overflow: visible; }
+}
+
+@media only screen and (min-width: 1960px) {
+    #containerPost { grid-template-columns: repeat(4, 1fr); }
+}
+
